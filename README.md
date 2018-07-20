@@ -14,14 +14,16 @@ Summary: Contains several basic utility functions including: moving (rolling, ru
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-catools-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-catools-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-catools-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-catools-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-catools-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-catools-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-catools-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-catools-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-catools-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-catools-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-catools-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-catools-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-catools/badges/version.svg)](https://anaconda.org/conda-forge/r-catools)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-catools/badges/downloads.svg)](https://anaconda.org/conda-forge/r-catools)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--catools-green.svg)](https://anaconda.org/conda-forge/r-catools) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-catools.svg)](https://anaconda.org/conda-forge/r-catools) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-catools.svg)](https://anaconda.org/conda-forge/r-catools) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-catools.svg)](https://anaconda.org/conda-forge/r-catools) |
 
 Installing r-catools
 ====================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
