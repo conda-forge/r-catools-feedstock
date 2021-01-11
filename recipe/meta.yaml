@@ -1,4 +1,4 @@
-{% set version = "1.18.0" %}
+{% set version = "1.18.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/caTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/caTools/caTools_{{ version }}.tar.gz
-  sha256: 0343698a41e8b516769af0433ac2e52a7df9be709b7f78c1825e88e1a37f3378
+  sha256: ffeba4ffbeed5d491bf79b1fde3477f413341e412f77316af20439f54447c9f9
 
 build:
-  merge_build_host: True  # [win]
-  skip: True  # [r_base == "3.5.1"]
-  number: 1
+  merge_build_host: true  # [win]
+  skip: true  # [r_base == "3.5.1"]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -47,12 +47,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=caTools
   license: GPL-3
-  summary: 'Contains several basic utility functions including: moving (rolling, running) window
-    statistic functions, read/write for GIF and ENVI binary files, fast calculation
-    of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum
-    and cumsum, etc.'
+  summary: 'Contains several basic utility functions including: moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.'
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
