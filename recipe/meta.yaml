@@ -1,4 +1,4 @@
-{% set version = "1.18.1" %}
+{% set version = "1.18.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/caTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/caTools/caTools_{{ version }}.tar.gz
-  sha256: ffeba4ffbeed5d491bf79b1fde3477f413341e412f77316af20439f54447c9f9
+  sha256: 75d61115afec754b053ed1732cc034f2aeb27b13e6e1932aa0f26bf590cf0293
 
 build:
   merge_build_host: true  # [win]
