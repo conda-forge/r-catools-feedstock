@@ -14,7 +14,6 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  skip: true  # [r_base == "3.5.1"]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -22,10 +21,12 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-bitops                   # [build_platform != target_platform]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_cxx') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -46,10 +47,11 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=caTools
-  license: GPL-3
+  license: GPL-3.0-only
   summary: 'Contains several basic utility functions including: moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.'
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
