@@ -1,4 +1,4 @@
-{% set version = "1.18.2" %}
+{% set version = "1.18.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/caTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/caTools/caTools_{{ version }}.tar.gz
-  sha256: 75d61115afec754b053ed1732cc034f2aeb27b13e6e1932aa0f26bf590cf0293
+  sha256: e71b3942a7a239779028b1104c262ec5f70183128638ac7fb649c8d62c0468d8
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
